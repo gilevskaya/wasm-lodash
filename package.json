@@ -1,0 +1,10 @@
+{
+  "name": "wasm-performance",
+  "version": "0.0.1",
+  "description": "Wasm performance tests",
+  "scripts": {
+    "compile": "emcc sum/sum.c -O2 -s WASM=1 -s SIDE_MODULE=1 -o sum/sum.wasm",
+    "start": "npm run compile && node sum/sum.js"
+  },
+  "license": "MIT"
+}
